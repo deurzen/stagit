@@ -528,11 +528,11 @@ writeheader(FILE *fp, const char *title)
 	xmlencode(fp, description, strlen(description));
 	fputs("</span></td></tr>", fp);
 	if (cloneurl[0]) {
-		fputs("<tr class=\"url\"><td></td><td>git clone <a href=\"", fp);
+		fputs("<tr class=\"url\"><td></td><td><span>git clone <a href=\"", fp);
 		xmlencode(fp, cloneurl, strlen(cloneurl)); /* not percent-encoded */
 		fputs("\">", fp);
 		xmlencode(fp, cloneurl, strlen(cloneurl));
-		fputs("</a></td></tr>", fp);
+		fputs("</a></span></td></tr>", fp);
 	}
 	fputs("<tr><td></td><td>\n", fp);
 	fprintf(fp, "<a href=\"%slog.html\">Log</a> | ", relpath);
