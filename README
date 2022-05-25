@@ -5,6 +5,7 @@ static git page generator.
 
 It generates static HTML pages for a git repository.
 
+Custom fork for https://git.deurzen.net.
 
 Usage
 -----
